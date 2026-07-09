@@ -2,14 +2,95 @@
 <html lang="en">
 
 <head>
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Encryption Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Secure Encryption Tool - Free Online AES-GCM Data Encryption | Client-Side Security</title>
+    <meta name="title" content="Secure Encryption Tool - Free Online AES-GCM Data Encryption | Client-Side Security">
+    <meta name="description" content="Free secure client-side encryption tool with AES-GCM, Base64, and Caesar cipher. Encrypt and decrypt sensitive data locally in your browser. No data transmission, 100% private and secure.">
+    <meta name="keywords" content="encryption tool, AES-GCM encryption, secure data encryption, client-side encryption, online encryption, free encryption tool, data security, privacy tool, base64 encoder, caesar cipher, text encryption, secure messaging">
+    <meta name="author" content="NTS_Nithish">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://encryption.semozhix.in/">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://encryption.semozhix.in/">
+    <meta property="og:title" content="Secure Encryption Tool - Free Online AES-GCM Data Encryption">
+    <meta property="og:description" content="Free secure client-side encryption tool with AES-GCM, Base64, and Caesar cipher. Encrypt and decrypt sensitive data locally in your browser with 100% privacy.">
+    <meta property="og:image" content="https://encryption.semozhix.in/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Semozhix Encryption Tools">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://encryption.semozhix.in/">
+    <meta name="twitter:title" content="Secure Encryption Tool - Free Online AES-GCM Data Encryption">
+    <meta name="twitter:description" content="Free secure client-side encryption tool with AES-GCM, Base64, and Caesar cipher. 100% client-side, no data transmission.">
+    <meta name="twitter:image" content="https://encryption.semozhix.in/twitter-image.jpg">
+    <meta name="twitter:creator" content="@NTS_Nithish">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#4361ee">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Encryption Tool">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔒</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔒</text></svg>">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Secure Encryption Tool",
+        "description": "Free secure client-side encryption tool with AES-GCM, Base64, and Caesar cipher algorithms for data protection and privacy.",
+        "url": "https://encryption.semozhix.in/",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "NTS_Nithish",
+            "url": "https://nts-nithish-portfolio.netlify.app"
+        },
+        "screenshot": "https://encryption.semozhix.in/screenshot.jpg",
+        "featureList": [
+            "AES-GCM Encryption",
+            "Base64 Encoding",
+            "Caesar Cipher",
+            "Client-Side Processing",
+            "No Data Transmission",
+            "Dark Mode Support"
+        ],
+        "browserRequirements": "Requires JavaScript and modern browser with Web Crypto API support"
+    }
+    </script>
     <style>
          :root {
             --primary: #4361ee;
             --primary-dark: #3a56d4;
+            --primary-light: #6c8aff;
             --secondary: #7209b7;
             --accent: #4cc9f0;
             --light: #f8f9fa;
@@ -18,9 +99,11 @@
             --gray-light: #e9ecef;
             --success: #4caf50;
             --danger: #f72585;
-            --border-radius: 10px;
+            --warning: #ff9800;
+            --border-radius: 12px;
             --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease;
+            --box-shadow-hover: 0 12px 28px rgba(67, 97, 238, 0.15);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         * {
@@ -76,6 +159,12 @@
             margin-bottom: 25px;
             box-shadow: var(--box-shadow);
             border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+        
+        .card:hover {
+            box-shadow: var(--box-shadow-hover);
+            transform: translateY(-2px);
         }
         
         .section-title {
@@ -95,7 +184,7 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: white;
+            color: var(--dark);
         }
         
         select,
@@ -104,11 +193,17 @@
             width: 100%;
             padding: 12px 15px;
             border-radius: 8px;
-            border: 1px solid #ced4da;
+            border: 2px solid #ced4da;
             font-family: inherit;
             font-size: 1rem;
             background-color: white;
             transition: var(--transition);
+        }
+        
+        select:hover,
+        textarea:hover,
+        input:hover {
+            border-color: var(--primary-light);
         }
         
         select:focus,
@@ -165,6 +260,11 @@
         .btn-primary:hover {
             background-color: var(--primary-dark);
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
         }
         
         .btn-secondary {
@@ -175,6 +275,11 @@
         
         .btn-secondary:hover {
             background-color: #f0f4ff;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary:active {
+            transform: translateY(0);
         }
         
         .btn-danger {
@@ -185,6 +290,17 @@
         
         .btn-danger:hover {
             background-color: #fff5f9;
+            transform: translateY(-2px);
+        }
+        
+        .btn-danger:active {
+            transform: translateY(0);
+        }
+        
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
         }
         
         .output-area {
@@ -274,6 +390,136 @@
             background-color: #e7f3ff;
             color: #004085;
             border-left: 4px solid var(--primary);
+            animation: slideInDown 0.3s ease;
+        }
+        
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            animation: slideInRight 0.3s ease;
+            max-width: 350px;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .toast.success {
+            border-left: 4px solid var(--success);
+        }
+        
+        .toast.error {
+            border-left: 4px solid var(--danger);
+        }
+        
+        .toast.warning {
+            border-left: 4px solid var(--warning);
+        }
+        
+        /* Password Strength Indicator */
+        .password-strength {
+            margin-top: 8px;
+            height: 4px;
+            background-color: var(--gray-light);
+            border-radius: 2px;
+            overflow: hidden;
+            display: none;
+        }
+        
+        .password-strength-bar {
+            height: 100%;
+            transition: var(--transition);
+            width: 0%;
+        }
+        
+        .password-strength.weak .password-strength-bar {
+            width: 33%;
+            background-color: var(--danger);
+        }
+        
+        .password-strength.medium .password-strength-bar {
+            width: 66%;
+            background-color: var(--warning);
+        }
+        
+        .password-strength.strong .password-strength-bar {
+            width: 100%;
+            background-color: var(--success);
+        }
+        
+        .password-hint {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+        
+        /* Loading Spinner */
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 0.6s linear infinite;
+        }
+        
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        /* Accessibility Improvements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        
+        *:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
         }
         /* Dark mode */
         
@@ -329,6 +575,15 @@
         body.dark-mode .info-text {
             color: #94a3b8;
         }
+        
+        body.dark-mode label {
+            color: #e2e8f0;
+        }
+        
+        body.dark-mode .toast {
+            background-color: #1e293b;
+            color: #e2e8f0;
+        }
         /* Responsive design */
         
         @media (max-width: 768px) {
@@ -375,97 +630,161 @@
     </style>
 </head>
 
-<body>
+<body itemscope itemtype="https://schema.org/WebApplication">
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
     <div class="container">
-        <button class="theme-toggle" id="themeToggle">🌙</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
 
-        <header>
+        <header role="banner">
             <h1>
-                <span>🔒</span> Secure Encryption Tool
-                <span>🔐</span>
+                <span aria-hidden="true">🔒</span> 
+                <span itemprop="name">Secure Encryption Tool</span>
+                <span aria-hidden="true">🔐</span>
             </h1>
-            <p class="tagline">A client-side encryption tool for secure data protection using AES-GCM, Base64 encoding, and Caesar cipher algorithms.</p>
+            <p class="tagline" itemprop="description">A client-side encryption tool for secure data protection using AES-GCM, Base64 encoding, and Caesar cipher algorithms.</p>
         </header>
 
-        <div class="alert">
-            <strong>Important:</strong> All encryption/decryption happens locally in your browser. Your data never leaves your device.
+        <div class="alert" role="alert" aria-live="polite">
+            <strong>🔐 Privacy First:</strong> All encryption/decryption happens locally in your browser. Your data never leaves your device.
         </div>
 
-        <div class="card">
-            <div class="section-title">
-                <span>⚙️</span> Encryption Settings
-            </div>
+        <main id="main-content" role="main">
+            <section class="card" aria-labelledby="settings-title">
+                <h2 class="section-title" id="settings-title">
+                    <span aria-hidden="true">⚙️</span> Encryption Settings
+                </h2>
 
-            <div class="form-group">
-                <label for="algorithm">Select Encryption Algorithm</label>
-                <select id="algorithm">
-                    <option value="aes">AES-GCM (Advanced Encryption Standard)</option>
-                    <option value="base64">Base64 Encoding</option>
-                    <option value="caesar">Caesar Cipher</option>
-                </select>
-            </div>
+                <div class="form-group">
+                    <label for="algorithm">Select Encryption Algorithm</label>
+                    <select id="algorithm" aria-describedby="algorithmInfo">
+                        <option value="aes">AES-GCM (Advanced Encryption Standard)</option>
+                        <option value="base64">Base64 Encoding</option>
+                        <option value="caesar">Caesar Cipher</option>
+                    </select>
+                </div>
 
-            <div id="key-area">
-                <div class="flex-row">
-                    <div id="password-container">
-                        <label for="password">Encryption Key (Required for AES)</label>
-                        <input id="password" type="password" placeholder="Enter a strong encryption key" />
-                    </div>
-                    <div id="shift-container" style="display: none;">
-                        <label for="shift">Shift Value (Caesar Cipher)</label>
-                        <input id="shift" type="number" value="3" min="1" max="25" />
+                <div id="key-area">
+                    <div class="flex-row">
+                        <div id="password-container">
+                            <label for="password">Encryption Key (Required for AES)</label>
+                            <input id="password" type="password" placeholder="Enter a strong encryption key" autocomplete="off" aria-required="true" />
+                            <div class="password-strength" id="passwordStrength" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                <div class="password-strength-bar"></div>
+                            </div>
+                            <small class="password-hint">Use at least 12 characters with mixed case, numbers, and symbols</small>
+                        </div>
+                        <div id="shift-container" style="display: none;">
+                            <label for="shift">Shift Value (Caesar Cipher)</label>
+                            <input id="shift" type="number" value="3" min="1" max="25" aria-label="Shift value for Caesar cipher" />
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label for="input">Input Text</label>
-                <textarea id="input" placeholder="Enter the text you want to encrypt or decrypt..."></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="input">Input Text</label>
+                    <textarea id="input" placeholder="Enter the text you want to encrypt or decrypt..." aria-describedby="input-help"></textarea>
+                    <small id="input-help" class="info-text">Press Ctrl+Enter to encrypt quickly</small>
+                </div>
 
-            <div class="button-group">
-                <button class="btn btn-primary" id="encryptBtn">
-                    <span>🔒</span>
-                    Encrypt Data
-                </button>
-                <button class="btn btn-secondary" id="decryptBtn">
-                    <span>🔓</span>
-                    Decrypt Data
-                </button>
-                <button class="btn btn-secondary" id="copyBtn">
-                    <span>📋</span>
-                    Copy Result
-                </button>
-                <button class="btn btn-danger" id="clearBtn">
-                    <span>🗑️</span>
-                    Clear All
-                </button>
-            </div>
-        </div>
+                <div class="button-group" role="group" aria-label="Encryption actions">
+                    <button class="btn btn-primary" id="encryptBtn" aria-label="Encrypt the input text">
+                        <span aria-hidden="true">🔒</span>
+                        Encrypt Data
+                    </button>
+                    <button class="btn btn-secondary" id="decryptBtn" aria-label="Decrypt the input text">
+                        <span aria-hidden="true">🔓</span>
+                        Decrypt Data
+                    </button>
+                    <button class="btn btn-secondary" id="copyBtn" aria-label="Copy result to clipboard">
+                        <span aria-hidden="true">📋</span>
+                        Copy Result
+                    </button>
+                    <button class="btn btn-danger" id="clearBtn" aria-label="Clear all fields">
+                        <span aria-hidden="true">🗑️</span>
+                        Clear All
+                    </button>
+                </div>
+            </section>
 
-        <div class="card">
-            <div class="section-title">
-                <span>📄</span> Output
-            </div>
-            <div id="output" class="output-area"></div>
-            <p class="info-text" id="algorithmInfo">AES-GCM provides authenticated encryption with associated data (AEAD) for maximum security.</p>
-        </div>
+            <section class="card" aria-labelledby="output-title">
+                <h2 class="section-title" id="output-title">
+                    <span aria-hidden="true">📄</span> Output
+                </h2>
+                <div id="output" class="output-area" role="log" aria-live="polite" aria-label="Encryption or decryption result"></div>
+                <p class="info-text" id="algorithmInfo">AES-GCM provides authenticated encryption with associated data (AEAD) for maximum security.</p>
+            </section>
+        </main>
     </div>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-brand">NTS_Nithish</div>
             <p>Professional Web Development & Security Solutions</p>
-            <div class="footer-links">
-                <a href="https://nts-nithish-portfolio.netlify.app/#contact" target="_blank" class="footer-link">Contact</a>
-                <a href="https://nts-nithish-portfolio.netlify.app" target="_blank" class="footer-link">Portfolio</a>
-                <a href="https://nts-nithish-portfolio.netlify.app/#projects" target="_blank" class="footer-link">Projects</a>
-            </div>
-            <div class="copyright">© 2023 NTS_Nithish. All rights reserved.</div>
+            <nav aria-label="Footer navigation">
+                <div class="footer-links">
+                    <a href="https://nts-nithish-portfolio.netlify.app/#contact" target="_blank" rel="noopener noreferrer" class="footer-link">Contact</a>
+                    <a href="https://nts-nithish-portfolio.netlify.app" target="_blank" rel="noopener noreferrer" class="footer-link">Portfolio</a>
+                    <a href="https://nts-nithish-portfolio.netlify.app/#projects" target="_blank" rel="noopener noreferrer" class="footer-link">Projects</a>
+                </div>
+            </nav>
+            <div class="copyright">© 2024 NTS_Nithish. All rights reserved.</div>
         </div>
     </footer>
 
     <script>
+        // Toast Notification System
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.textContent = message;
+            toast.setAttribute('role', 'alert');
+            toast.setAttribute('aria-live', 'assertive');
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.animation = 'fadeOut 0.3s ease';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        // Password Strength Checker
+        function checkPasswordStrength(password) {
+            const strengthIndicator = document.getElementById('passwordStrength');
+            
+            if (!password) {
+                strengthIndicator.style.display = 'none';
+                strengthIndicator.className = 'password-strength';
+                return;
+            }
+
+            strengthIndicator.style.display = 'block';
+            let strength = 0;
+
+            // Length check
+            if (password.length >= 8) strength++;
+            if (password.length >= 12) strength++;
+            
+            // Character variety checks
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^a-zA-Z0-9]/.test(password)) strength++;
+
+            // Set strength class
+            strengthIndicator.className = 'password-strength';
+            if (strength <= 2) {
+                strengthIndicator.classList.add('weak');
+                strengthIndicator.setAttribute('aria-valuenow', '33');
+            } else if (strength <= 4) {
+                strengthIndicator.classList.add('medium');
+                strengthIndicator.setAttribute('aria-valuenow', '66');
+            } else {
+                strengthIndicator.classList.add('strong');
+                strengthIndicator.setAttribute('aria-valuenow', '100');
+            }
+        }
+
         // Theme toggler
         const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
@@ -477,6 +796,7 @@
         if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
             body.classList.add('dark-mode');
             themeToggle.textContent = '☀️';
+            themeToggle.setAttribute('aria-label', 'Switch to light mode');
         }
 
         themeToggle.addEventListener('click', () => {
@@ -484,10 +804,14 @@
                 body.classList.remove('dark-mode');
                 localStorage.setItem('theme', 'light');
                 themeToggle.textContent = '🌙';
+                themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+                showToast('Light mode activated', 'success');
             } else {
                 body.classList.add('dark-mode');
                 localStorage.setItem('theme', 'dark');
                 themeToggle.textContent = '☀️';
+                themeToggle.setAttribute('aria-label', 'Switch to light mode');
+                showToast('Dark mode activated', 'success');
             }
         });
 
@@ -621,6 +945,11 @@
         const shiftContainer = document.getElementById('shift-container');
         const algorithmInfo = document.getElementById('algorithmInfo');
 
+        // Password strength listener
+        passwordEl.addEventListener('input', (e) => {
+            checkPasswordStrength(e.target.value);
+        });
+
         // Set algorithm info text
         function updateAlgorithmInfo() {
             const algo = algorithmEl.value;
@@ -655,6 +984,18 @@
         algorithmEl.addEventListener('change', setVisibility);
         setVisibility();
 
+        // Button state management
+        function setButtonLoading(button, isLoading) {
+            if (isLoading) {
+                button.disabled = true;
+                button.dataset.originalText = button.innerHTML;
+                button.innerHTML = '<span class="spinner"></span> Processing...';
+            } else {
+                button.disabled = false;
+                button.innerHTML = button.dataset.originalText;
+            }
+        }
+
         // Encrypt button handler
         encryptBtn.addEventListener('click', async() => {
             const algo = algorithmEl.value;
@@ -663,38 +1004,34 @@
             try {
                 if (!text) {
                     outputEl.textContent = 'No input provided. Please enter text to encrypt.';
+                    showToast('Please enter text to encrypt', 'warning');
                     return;
                 }
+
+                setButtonLoading(encryptBtn, true);
 
                 if (algo === 'aes') {
                     if (!passwordEl.value) {
                         outputEl.textContent = 'Please enter an encryption key for AES-GCM encryption.';
+                        showToast('Encryption key required', 'warning');
+                        setButtonLoading(encryptBtn, false);
                         return;
                     }
                     outputEl.textContent = await encryptAES(text, passwordEl.value);
+                    showToast('✅ Data encrypted successfully!', 'success');
                 } else if (algo === 'base64') {
                     outputEl.textContent = encodeBase64(text);
+                    showToast('✅ Data encoded successfully!', 'success');
                 } else if (algo === 'caesar') {
                     outputEl.textContent = caesarEncrypt(text, shiftEl.value);
+                    showToast('✅ Data encrypted successfully!', 'success');
                 }
 
-                // Success message
-                setTimeout(() => {
-                    if (outputEl.textContent && !outputEl.textContent.includes('Error')) {
-                        const successMsg = document.createElement('div');
-                        successMsg.className = 'alert';
-                        successMsg.style.backgroundColor = '#d4edda';
-                        successMsg.style.color = '#155724';
-                        successMsg.style.borderLeftColor = '#28a745';
-                        successMsg.textContent = '✅ Encryption successful!';
-                        document.querySelector('.container').insertBefore(successMsg, document.querySelector('.card'));
-
-                        setTimeout(() => successMsg.remove(), 3000);
-                    }
-                }, 100);
-
             } catch (err) {
-                outputEl.textContent = 'Error: ' + err.message;
+                outputEl.textContent = '❌ Error: ' + err.message;
+                showToast('Encryption failed: ' + err.message, 'error');
+            } finally {
+                setButtonLoading(encryptBtn, false);
             }
         });
 
@@ -706,55 +1043,55 @@
             try {
                 if (!text) {
                     outputEl.textContent = 'No input provided. Please enter encrypted text to decrypt.';
+                    showToast('Please enter encrypted text', 'warning');
                     return;
                 }
+
+                setButtonLoading(decryptBtn, true);
 
                 if (algo === 'aes') {
                     if (!passwordEl.value) {
                         outputEl.textContent = 'Please enter the encryption key to decrypt.';
+                        showToast('Encryption key required', 'warning');
+                        setButtonLoading(decryptBtn, false);
                         return;
                     }
                     outputEl.textContent = await decryptAES(text, passwordEl.value);
+                    showToast('✅ Data decrypted successfully!', 'success');
                 } else if (algo === 'base64') {
                     outputEl.textContent = decodeBase64(text);
+                    showToast('✅ Data decoded successfully!', 'success');
                 } else if (algo === 'caesar') {
                     outputEl.textContent = caesarDecrypt(text, shiftEl.value);
+                    showToast('✅ Data decrypted successfully!', 'success');
                 }
 
-                // Success message
-                setTimeout(() => {
-                    if (outputEl.textContent && !outputEl.textContent.includes('Error')) {
-                        const successMsg = document.createElement('div');
-                        successMsg.className = 'alert';
-                        successMsg.style.backgroundColor = '#d4edda';
-                        successMsg.style.color = '#155724';
-                        successMsg.style.borderLeftColor = '#28a745';
-                        successMsg.textContent = '✅ Decryption successful!';
-                        document.querySelector('.container').insertBefore(successMsg, document.querySelector('.card'));
-
-                        setTimeout(() => successMsg.remove(), 3000);
-                    }
-                }, 100);
-
             } catch (err) {
-                outputEl.textContent = 'Error: ' + err.message;
+                outputEl.textContent = '❌ Error: ' + err.message;
+                showToast('Decryption failed: ' + err.message, 'error');
+            } finally {
+                setButtonLoading(decryptBtn, false);
             }
         });
 
         // Copy button handler
         copyBtn.addEventListener('click', () => {
             const txt = outputEl.textContent;
-            if (!txt || txt.includes('Error') || txt.includes('No input')) return;
+            if (!txt || txt.includes('Error') || txt.includes('No input')) {
+                showToast('Nothing to copy', 'warning');
+                return;
+            }
 
             navigator.clipboard.writeText(txt).then(() => {
                 const originalText = copyBtn.innerHTML;
-                copyBtn.innerHTML = '<span>✅</span> Copied';
+                copyBtn.innerHTML = '<span>✅</span> Copied!';
+                showToast('Copied to clipboard!', 'success');
 
                 setTimeout(() => {
                     copyBtn.innerHTML = originalText;
                 }, 1500);
             }).catch(err => {
-                outputEl.textContent = 'Failed to copy: ' + err;
+                showToast('Failed to copy: ' + err.message, 'error');
             });
         });
 
@@ -764,6 +1101,8 @@
             outputEl.textContent = '';
             passwordEl.value = '';
             shiftEl.value = '3';
+            checkPasswordStrength('');
+            showToast('All fields cleared', 'success');
         });
 
         // Set default shift value
@@ -784,6 +1123,12 @@
 
         // Initialize
         updateAlgorithmInfo();
+
+        // Performance: Log page load time
+        window.addEventListener('load', () => {
+            const loadTime = performance.now();
+            console.log(`Page loaded in ${loadTime.toFixed(2)}ms`);
+        });
     </script>
 </body>
 
